@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-light:white;
+    --accent:#2C3639;
+
+    --sidebar-background:#576F72;
+    --text-color:#2C3639;
+    --sidebar-color:var(--color);
+    --section-background:#DCD7C9;   
+}
+body{
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    width:100vw;
+    color:var(--color)
+}
+.sidebar{
+    /* display:flex;
+    flex-direction: column; */
+    min-width: 210px;
+    background-color: var(--sidebar-background);
+    color:var(--main-light)
+}
+.sidebar nav{
+    display:flex;
+    flex-direction: column;
+    
+}
+header{
+    height:100px;/*trial*/
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: var(--main-light);
+    /* color:#2C3639; */
+    padding:0px 15px;/*trial*/
+}
+header div{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#user-photo{
+    height: 60px;
+    width: auto;
+    border: 1px solid black;
+    padding:3px;
+    border-radius: 50%;
+    background-color: var(--accent);
+}
+header ul{
+    display:flex;
+    gap:10px;/*trial*/
+}
+ul{
+    list-style-type: none;
+    padding:0px;
+    margin:0px;
+}
+a:link {
+    text-decoration: inherit;
+    color: inherit;
+}
+a:visited {
+    text-decoration: inherit;
+    color: inherit;
+}
+.sidebar nav a{
+    padding: 0 0 0.5em 2em;
+}
+svg{
+    height:20px;
+    width:20px;
+    vertical-align: top;
+}
+h1{
+    text-align: center;
+}
+h1 svg{
+    height:40px;
+    width:40px; 
+}
+nav svg{
+    margin-right: 1em;
+}
+article{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.card{
+    background: var(--main-light);
+    margin:10px;
+    border-radius: 10px;
+    padding:10px;
+}
+section{
+    display: flex;
+    background:var(--section-background);
+}
+.announcements{
+  
+}
+.sidebar-main div{
+    margin: 10px 0;
+    border-radius: 10px;
+    background: var(--main-light);
+    padding:10px;
+}
