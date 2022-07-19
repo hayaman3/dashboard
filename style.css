@@ -1,3 +1,6 @@
+/*
+    GENERAL ||
+*/
 *{
     margin:0px;
     padding:0px;
@@ -14,15 +17,31 @@ body{
     overflow: hidden;
     height: 100vh;
     margin:0 10px;
-    padding-top:10px;
 }
-
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+h3{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; 
+    margin-bottom: 10px;
+}
+/*
+    WRAPPER ||
+*/
 .wrapper{
     display: flex;
     height: 100%;
+    margin:15px;
 }
+/*
+    SIDENAV ||
+*/
 .sidenav{
     min-width: 40px;
+    flex-basis:40px;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -31,7 +50,7 @@ body{
     border-radius: 10px;
     padding-bottom:20px;
     padding-top: 20px;
-    margin-top: 10px;
+
 }
 nav{
     display:flex;
@@ -53,11 +72,14 @@ nav svg{
     border-radius: 50%;
     background: var(--white);
 }
+/*
+    MAIN ||
+*/
 main{
     overflow-y: auto;
     width: 100vw;
     height: 100%;
-    padding:10px;
+    padding:0 10px 10px 10px;
 }
 main::-webkit-scrollbar {
     width: 15px;
@@ -72,6 +94,9 @@ main::-webkit-scrollbar-thumb {
     background-clip: content-box;
     background-color: #41729F;
 }
+/*
+    HEADER ||
+*/
 header{
     background-color: var(--white);
     margin:0 auto;
@@ -93,17 +118,26 @@ header svg{
     display: block;
     margin: auto 0;
 } */
-header div:nth-child(2){
+header :nth-child(2){
     display: flex;
     gap:1rem;
 }
+/*
+    SECTION ||
+*/
 section{
     display:flex;
     gap:10px;
 }
+section :nth-child(1){
+    flex-grow:2;
+}
+/*
+    GRID ||
+*/
 .grid{
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap:10px;
 }
 .card{
@@ -114,30 +148,28 @@ section{
             inset 0.3em 0 0 #3da454,
             0.2em 0.2em 0.2em rgba(0,0,0,0.3);
 }
-.title{
- 
+/*
+    EXERCISES ||
+*/
+.exercises > h3:nth-of-type(1){
+    width:inherit;
+    overflow: hidden;
+} 
+.exercises > h3:nth-of-type(2){
+    margin-top: 10px;
 }
-h3{
-    margin-bottom: 10px;
-}
-.flex{
+.exercises{
     display:flex;
     flex-direction: column;
+    flex-basis:30%;
 }
-.announcements{
-    display:flex;
-    flex-direction: column;
-    gap:10px;
-}
-.scroll{
+.exercises article{
     background: #ffffff;
-    padding: 10px;
+    padding: 10px 10px 10px 10px;
     border-radius: 10px;
-    max-width: 200px;
-
+    display:flex;
+    flex-direction: column;
 }
-
-
 /* footer{
     height:500px;
     background:rgb(238, 238, 238);
@@ -152,8 +184,7 @@ h3{
     border-radius: 50%;
     z-index: 4;
 } */
-
-input {
+input{
     color: rgba(0,0,0,.87);
     outline-color: none;
     background-color: transparent;
@@ -162,11 +193,9 @@ input {
     flex-grow:1;
     font-size: 10px;
 }
-
 input:focus {
     outline: none;
 }
-
 .search-icon {
     color: rgb(154, 160, 166);
     margin: 0px 5px;
@@ -189,4 +218,36 @@ input:focus {
 
 .trial:hover{
   box-shadow: 1px 1px 8px 1px #dcdcdc;
+}
+.exercises p{
+    border-bottom: 1px solid grey;
+
+    padding-bottom: 10px;
+}
+
+@media (max-width: 550px) {
+    .wrapper {
+        flex-direction: column-reverse;
+    }
+    .sidenav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        /* padding:5px 10px; */
+        padding:0px;
+        margin:0px;
+        overflow-x: hidden;
+        max-height:50px;
+        max-width: 500px;
+        
+    }
+    .wrapper nav{
+        display: flex;
+        align-items: center;
+        overflow-x: hidden;
+        flex-direction: row;
+        padding:0;
+        height:100%
+    }
 }
