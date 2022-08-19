@@ -22,22 +22,19 @@
             <a title="Support" href="#"><svg id="icon_support" viewBox="0 0 24 24"><path d="M11,18H13V16H11V18M12,6A4,4 0 0,0 8,10H10A2,2 0 0,1 12,8A2,2 0 0,1 14,10C14,12 11,11.75 11,15H13C13,12.75 16,12.5 16,10A4,4 0 0,0 12,6M5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3Z"></path></svg></a>
             <a title="Privacy" href="#"><svg id="icon_privacy" viewBox="0 0 24 24"><path d="M10,17L6,13L7.41,11.59L10,14.17L16.59,7.58L18,9M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1Z"></path></svg></a>
         </nav>
-        <div>            <div class="user-online-indicator"></div>
-        <img id="user-photo" src="media/thor.png" /></div>
+        <div>            
+            <div class="user-online-indicator"></div>
+            <img id="user-photo" src="media/thor.png" />
+        </div>
     </div>
 
     <main>
         <header>
             <div>
-                <!-- <form>
-                    <label for="email"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg></label>
-                <input type="text" placeholder="Search.." name="search">
-                </form> -->
                 <form id="search-form">
-                    <div class="trial">
+                    <div class="search-style">
                       <img class="search-icon" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDU2Ljk2NiA1Ni45NjYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDU2Ljk2NiA1Ni45NjY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPHBhdGggZD0iTTU1LjE0Niw1MS44ODdMNDEuNTg4LDM3Ljc4NmMzLjQ4Ni00LjE0NCw1LjM5Ni05LjM1OCw1LjM5Ni0xNC43ODZjMC0xMi42ODItMTAuMzE4LTIzLTIzLTIzcy0yMywxMC4zMTgtMjMsMjMgIHMxMC4zMTgsMjMsMjMsMjNjNC43NjEsMCw5LjI5OC0xLjQzNiwxMy4xNzctNC4xNjJsMTMuNjYxLDE0LjIwOGMwLjU3MSwwLjU5MywxLjMzOSwwLjkyLDIuMTYyLDAuOTIgIGMwLjc3OSwwLDEuNTE4LTAuMjk3LDIuMDc5LTAuODM3QzU2LjI1NSw1NC45ODIsNTYuMjkzLDUzLjA4LDU1LjE0Niw1MS44ODd6IE0yMy45ODQsNmM5LjM3NCwwLDE3LDcuNjI2LDE3LDE3cy03LjYyNiwxNy0xNywxNyAgcy0xNy03LjYyNi0xNy0xN1MxNC42MSw2LDIzLjk4NCw2eiIgZmlsbD0iIzAwMDAwMCIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" />
                       <input class="search" type="text">
-                      
                     </div>  
                   </form>
             </div>
@@ -53,96 +50,104 @@
                 <h3>My Projects</h3>
                 <article class="grid">
                     <div class="card">
-                        <p class="title">Article Title</p>
+                        <h5>Article Title</h5>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
                     </div>
                     <div class="card">
-                        <p class="title">Article Title</p>
+                        <h5>Article Title</h5>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
                     </div>
                     <div class="card">
-                        <p class="title">Article Title</p>
+                        <h5>Article Title</h5>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
                     </div>
                     <div class="card">
-                        <p class="title">Article Title</p>
+                        <h5>Article Title</h5>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
                     </div>
                     <div class="card">
-                        <p class="title">Article Title</p>
+                        <h5>Article Title</h5>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
                     </div>
                     <div class="card">
-                        <p class="title">Article Title</p>
+                        <h5>Article Title</h5>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
                     </div> 
                 </article>
             </div>   
             <div class="exercises">
+                <div>
                 <h3>JavaScript Exercises</h3>
                 <article>
-                    <h4><a href="">Caesar Cipher</a></h4>
+                    <h5><a href="">Caesar Cipher</a></h5>
                     <p>Encrypt/Decrypt messages using the Caesar Cipher.</p>
-                    <h4><a href="">Fibonacci</a></h4>
+                    <h5><a href="">Fibonacci</a></h5>
                     <p>Calculate the value of the position in the Fibonacci sequence of a given number.</p>
-                    <h4><a href="">Palindromes</a></h4>
+                    <h5><a href="">Palindromes</a></h5>
                     <p>Analyze a string and determine if it is a Palindrome.</p>
-                    <h4><a href="">Find the Oldest</a></h4>
+                    <h5><a href="">Find the Oldest</a></h5>
                     <p>Find the oldest person in an object regardless of living.</p>
-                    <h4><a href="">Get the Titles</a></h4>
+                    <h5><a href="">Get the Titles</a></h5>
                     <p>Get book titles from an array of book objects.</p>
-                    <h4><a href="">Calculator</a></h4>
+                    <h5><a href="">Calculator</a></h5>
                     <p>Basic calculator functions.</p>
-                    <h4><a href="">Temp Conversion</a></h4>
+                    <h5><a href="">Temp Conversion</a></h5>
                     <p>Temperature celsius/fahrenheit conversion.</p>
-                    <h4><a href="">Leap Years</a></h4>
+                    <h5><a href="">Leap Years</a></h5>
                     <p>Determine whether or not a given year is a leap year.</p>
-                    <h4><a href="">Sum All</a></h4>
+                    <h5><a href="">Sum All</a></h5>
                     <p>Take 2 integers and return the sum of every number between (and including) them.</p>
-                    <h4><a href="">Remove from Array</a></h4>
+                    <h5><a href="">Remove from Array</a></h5>
                     <p>Remove a specified value from an array.</p>
-                    <h4><a href="">Reverse a String</a></h4>
+                    <h5><a href="">Reverse a String</a></h5>
                     <p>Reverse a string.</p>              
-                    <h4><a href="">Repeat a String</a></h4>
+                    <h5><a href="">Repeat a String</a></h5>
                     <p>Repeat a string a given number of times.</p>          
-                    <h4><a href="">Hello World</a></h4>
+                    <h5><a href="">Hello World</a></h5>
                     <p>JEST Javascript Testing Framework exercise.</p>
                 </article>
-                
+            </div>
+            <div>
                 <h3>CSS Exercises</h3>
                 <article>
-                    <h4><a href="">Grid Layout</a></h4>
+                    <h5><a href="">Grid Layout</a></h5>
                     <p>The Holy Grail Layout with Grid</p>
-                    <h4><a href="">Grid Scaling 2</a></h4>
+                    <h5><a href="">Grid Scaling 2</a></h5>
                     <p>Holy Grail Mockup with Grid</p>
-                    <h4><a href="">Grid Scaling 1</a></h4>
+                    <h5><a href="">Grid Scaling 1</a></h5>
                     <p>Responsive Holy Grail Layout with Grid</p>
-                    <h4><a href="">Flex Layout 2</a></h4>
+                    <h5><a href="">Flex Layout 2</a></h5>
                     <p>The Holy Grail of Layouts with Flexbox</p>
-                    <h4><a href="">Flex Layout 1</a></h4>
+                    <h5><a href="">Flex Layout 1</a></h5>
                     <p>An entire page.</p>
-                    <h4><a href="">Flex Modal</a></h4>
+                    <h5><a href="">Flex Modal</a></h5>
                     <p>A common "modal" style with Flexbox</p>
-                    <h4><a href="">Flex Information</a></h4>
+                    <h5><a href="">Flex Information</a></h5>
                     <p>A very common website feature</p>
-                    <h4><a href="">Flex Header 2</a></h4>
+                    <h5><a href="">Flex Header 2</a></h5>
                     <p>Another common header style</p>
-                    <h4><a href="">Flex Header 1</a></h4>
+                    <h5><a href="">Flex Header 1</a></h5>
                     <p>A Basic Header</p>
-                    <h4><a href="">Flex Center</a></h4>
+                    <h5><a href="">Flex Center</a></h5>
                     <p>Centering with Flexbox</p>
-                    <h4><a href="">Pop-Up Modal</a></h4>
+                    <h5><a href="">Pop-Up Modal</a></h5>
                     <p>Pop-Up Modal Activated on Button Click</p>
-                    <h4><a href="">Drop-Down Menu</a></h4>
+                    <h5><a href="">Drop-Down Menu</a></h5>
                     <p>Drop-Down Menu Activated on Hover</p>
-                    <h4><a href="">Button Hover</a></h4>
+                    <h5><a href="">Button Hover</a></h5>
                     <p>Change Text Size on Hover</p>
                 </article>
             </div>    
+            </div>    
         </section>
-        <!-- <footer>
-     
-        </footer> -->
+        <footer>
+            <a href="https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-admin-dashboard">
+                <img src="svg/TOP.svg" alt="The Odin Project" id="svg">
+            </a>
+            <a href="https://github.com/hayaman3">
+                <img src="svg/github.svg" alt="github.com" id="svg">
+            </a>
+        </footer>
     </main>
     </div>
 </body>

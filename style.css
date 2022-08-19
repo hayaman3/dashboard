@@ -5,52 +5,63 @@
     margin:0px;
     padding:0px;
 }
+
 :root{
     --white:#ffffff;
     --accent:#062335;
     --body:#e6efec;
     --graient:linear-gradient(#3da454 , #45a45d)
-    /* --white:whitesmoke; */
 }
+
 body{
     background:var(--body);
     overflow: hidden;
-    height: 100vh;
-    margin:0 10px;
+    min-height:100vh;
+    margin:0 1vw;
+    font-size: clamp(.8rem, -2.333rem + 6.666vw, 1.5rem);
 }
+
 a, a:hover, a:focus, a:active {
     text-decoration: none;
     color: inherit;
 }
+
 h3{
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden; 
-    margin-bottom: 10px;
+    margin-bottom: .625em;
+}
+h5{
+    font-size: clamp(1rem, -2.333rem + 6.666vw, 2rem);
+
+}
+p{
+    opacity:.7;
 }
 /*
     WRAPPER ||
 */
 .wrapper{
     display: flex;
-    height: 100%;
-    margin:15px;
+    height: 98vh;
+    margin:1vh;
 }
 /*
     SIDENAV ||
 */
 .sidenav{
     min-width: 40px;
-    flex-basis:40px;
     display:flex;
     flex-direction: column;
     align-items: center;
     background: var(--accent);
-    overflow-x: hidden;
-    border-radius: 10px;
-    padding-bottom:20px;
-    padding-top: 20px;
-
+    overflow: hidden;
+    border-radius: .625em;
+    padding-bottom:5vh;
+    padding-top: 5vh;
+    flex: 0 0 50px;
+    max-height: calc(100vh - 12vh);
 }
 nav{
     display:flex;
@@ -59,8 +70,12 @@ nav{
     flex:1;
 }
 svg{
-    height: 15px;
+    height: 20px;
     width: auto;
+    
+}
+svg:hover{
+    transform: scale(1.2)
 }
 nav svg{
     fill:var(--white);
@@ -102,88 +117,30 @@ header{
     margin:0 auto;
     display:flex;
     border-radius: 10px;
-    height: 20px;
     align-items: center;
     padding:10px 15px 10px 10px;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 2vh;
 }
-/* header form{
+.search-style {
     min-width: 50px;
     max-width: 250px;
-    padding: 0 10px;
-}
-header svg{
-    fill:rgb(32, 32, 32);
-    display: block;
-    margin: auto 0;
-} */
-header :nth-child(2){
-    display: flex;
-    gap:1rem;
-}
-/*
-    SECTION ||
-*/
-section{
+    height: 20px;
+    padding: 2px;
+    border-radius: 50px;
+    border: 1px solid #dcdcdc;
+    outline-color: none;
+    cursor: text;
+    background-color: transparent;
     display:flex;
-    gap:10px;
+    flex-direction: row;
+    align-items: center;
 }
-section :nth-child(1){
-    flex-grow:2;
+
+.search-style:hover{
+  box-shadow: 1px 1px 8px 1px #dcdcdc;
 }
-/*
-    GRID ||
-*/
-.grid{
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap:10px;
-}
-.card{
-    background: #ffffff;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow:
-            inset 0.3em 0 0 #3da454,
-            0.2em 0.2em 0.2em rgba(0,0,0,0.3);
-}
-/*
-    EXERCISES ||
-*/
-.exercises > h3:nth-of-type(1){
-    width:inherit;
-    overflow: hidden;
-} 
-.exercises > h3:nth-of-type(2){
-    margin-top: 10px;
-}
-.exercises{
-    display:flex;
-    flex-direction: column;
-    flex-basis:30%;
-}
-.exercises article{
-    background: #ffffff;
-    padding: 10px 10px 10px 10px;
-    border-radius: 10px;
-    display:flex;
-    flex-direction: column;
-}
-/* footer{
-    height:500px;
-    background:rgb(238, 238, 238);
-} */
-/* .user-online-indicator {
-    width: 10px;
-    height: 10px;
-    background-color: #53f45a;
-    position: absolute;
-    bottom: 15px;
-    left:35px;
-    border-radius: 50%;
-    z-index: 4;
-} */
+ 
 input{
     color: rgba(0,0,0,.87);
     outline-color: none;
@@ -200,47 +157,117 @@ input:focus {
     color: rgb(154, 160, 166);
     margin: 0px 5px;
 }
+header :nth-child(2){
+    display: flex;
+    gap:1rem;
+    align-items: baseline;
+}
 
-.trial {
-    min-width: 50px;
-    max-width: 250px;
-    height: 20px;
-    padding: 2px;
-    border-radius: 50px;
-    border: 1px solid #dcdcdc;
-    outline-color: none;
-    cursor: text;
-    background-color: transparent;
+/*
+    SECTION ||
+*/
+section{
     display:flex;
-    flex-direction: row;
-    align-items: center;
+    gap:1em;
+    
+}
+section :nth-child(1){
+    flex-grow:2;
+}
+/*
+    GRID ||
+*/
+.grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap:1.5vw;
+}
+.card{
+    background: #ffffff;
+    padding: 10px 10px 10px 15px;
+    border-radius: 10px;
+    box-shadow:
+            inset 0.3em 0 0 #3da454,
+            0.2em 0.2em 0.2em rgba(0,0,0,0.3);
+}
+/*
+    EXERCISES ||
+*/
+.exercises div:nth-of-type(1)> h3{
+    width:inherit;
+    overflow: hidden;
+
+} 
+
+.exercises  div:nth-of-type(2) > h3{
+    margin-top: 10px;
 }
 
-.trial:hover{
-  box-shadow: 1px 1px 8px 1px #dcdcdc;
+.exercises{
+    display:flex;
+    flex-direction: column;
+    flex-basis:30%;
 }
+
+.exercises article{
+    background: #ffffff;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    display:flex;
+    flex-direction: column;
+    box-shadow: .2em 0.2em 0.2em rgba(0,0,0,0.3);
+}
+
 .exercises p{
     border-bottom: 1px solid grey;
-
     padding-bottom: 10px;
+}
+.exercises div h5:not(:first-child){
+    padding-top: 1vh
+}
+/* 
+    FOOTER ||
+*/
+footer{
+    width: 100%;
+    align-self: flex-end;
+    display:flex;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    gap:5%;
+    padding-top:2%;
+    border-top: grey solid 1px;
+    margin-top: 2vh;
+}
+
+#svg{
+    height: 30px;
+    width: 24px;
 }
 
 @media (max-width: 550px) {
+    body{
+        
+    }
     .wrapper {
         flex-direction: column-reverse;
+        margin:0px;
+        padding:0px;
+        align-items: stretch;
+    }
+    main{
+        margin:0px;
+        padding:0px;
     }
     .sidenav{
         display: flex;
         align-items: center;
         justify-content: space-between;
         flex-direction: row;
-        /* padding:5px 10px; */
-        padding:0px;
-        margin:0px;
+        padding:0 2.5vw;
         overflow-x: hidden;
         max-height:50px;
-        max-width: 500px;
-        
     }
     .wrapper nav{
         display: flex;
@@ -249,5 +276,20 @@ input:focus {
         flex-direction: row;
         padding:0;
         height:100%
+    }
+    section{
+        flex-wrap: wrap;
+    }
+    .exercises{
+        flex-direction: row;
+        gap:1vw;
+        flex-basis:auto;
+    }
+    .exercises  div:nth-of-type(2) > h3{
+        margin-top: 0;
+    }
+    svg{
+        height: 12px;
+        width: auto;
     }
 }
